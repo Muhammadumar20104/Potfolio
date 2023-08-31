@@ -14,6 +14,9 @@ export default {
         'lg': '1024px',
         'xl': '1280px',
       },
+      fontFamily:{
+        roboto:["Roboto"]
+      },
     },
   },
   darkMode: false, // or 'media' or 'class'

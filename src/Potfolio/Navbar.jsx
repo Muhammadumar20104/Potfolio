@@ -30,16 +30,14 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box p={5} display={"flex"} color={"black"}>
+      <Box p={"35px"} display={"flex"} color={"black"}>
         <AppBar>
           <Toolbar>
             {/* <Box display={"flex"}> */}
             <EmojiEmotionsIcon
-
               fontSize="large"
-              sx={{ display: { xs: "none", md: "block" } ,color:"#F9CA0B"}}
+              sx={{ display: { xs: "block" }, color: "#F9CA0B" }}
             />
-            <MenuIcon sx={{ display: { xs: "block", md: "none" } }} />
 
             <Typography
               variant="h6"
@@ -47,7 +45,7 @@ function Navbar() {
               sx={{
                 display: "flex",
                 width: { xs: "100%" },
-                justifyContent: { xs: "end", md: "start" },
+                justifyContent: { md: "start",sm:"start",xs:"center" },
               }}
             >
               Umar's
@@ -56,11 +54,10 @@ function Navbar() {
               sx={{
                 flexGrow: 1,
                 "& button": { m: 1 },
-                display: { xs: "none", md: "flex" },
+                display: { xs: "none", sm: "flex" },
+                justifyContent: { md: "center", sm: "end" },
+                gap: { md: 15, sm: 5 },
               }}
-              //   display={"flex"}
-              justifyContent={"center"}
-              gap={15}
             >
               <Button size="large" sx={{ color: "#F9CA0B" }}>
                 Home{" "}
@@ -72,16 +69,22 @@ function Navbar() {
                 About{" "}
               </Button>
             </Box>
+            <MenuIcon sx={{ display: { xs: "block", sm: "none" } }} />
             <Box
               sx={{
-                display: { xs: "flex" },
+                display: { xs: "none", md: "flex" },
                 justifyContent: "flex-end",
                 width: { xs: "100%" },
                 gap: { xs: 1, md: 2 },
               }}
             >
               <LanguageIcon fontSize="large" />
-              <LinkedInIcon variant="link" fontSize="large" sx={{color:"blue"}} href="www.linkedin.com/in/muhammad-umar-b19323244/"/>
+              <LinkedInIcon
+                variant="link"
+                fontSize="large"
+                sx={{ color: "#0A66C2" }}
+                href="www.linkedin.com/in/muhammad-umar-b19323244/"
+              />
               <Avatar
                 alt="Remy Sharp"
                 src="src\Components\W4.jpg"
