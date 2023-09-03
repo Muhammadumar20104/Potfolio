@@ -99,7 +99,7 @@ function Display() {
 
         <div className="flex flex-col justify-center md:text-6xl xs:text-4xl font-bold h-full">
           <div className="flex justify-center p-5">Hey I'm Umar</div>
-          <div className="md:w-[600px] xs:w-fit text-gray-700 text-lg justify-center flex p-8  font-semibold">
+          <div className="md:w-[600px] xs:w-fit text-gray-700 text-center text-lg justify-center flex p-8  font-semibold">
             A Frontend Web Developer Focused on Responsive Design And Build A
             Attractive Website For our Client
           </div>
@@ -114,6 +114,9 @@ function Display() {
             Project
           </Button>
         </div>
+      </div>
+      <div className=" flex justify-center ">
+        <div class="box-content h-0 w-20 rounded-2xl   border-2 border-slate-950 "></div>
       </div>
     </>
   );

@@ -12,15 +12,17 @@ import Display from "./Potfolio/Display";
 import { Button, ButtonGroup, IconButton } from "@mui/material";
 
 import About from "./Potfolio/About";
+import Projects from "./Potfolio/Projects";
+import Contact from "./Potfolio/Contact";
 
 function App() {
-
-
   return (
     <>
       <Navbar />
       <Display />
       <About />
+      <Projects />
+      <Contact/>
       {/* <div className=" p-1 ">
         <MUI />
         <Sold />
