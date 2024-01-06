@@ -42,7 +42,7 @@ function Display() {
   };
   return (
     <>
-      <div className=" xs:hidden lg:block">
+      <div className=" xs:hidden lg:block ">
         <div className="absolute  flex flex-col  justify-center h-[90%]   ">
           <ButtonGroup
             style={{ position: "", backgroundColor: "whiteF" }}
@@ -84,7 +84,7 @@ function Display() {
         </div>
       </div>
       <div className="relative  w-full h-fit grid grid-rows-3 justify-center ">
-        <div className="flex justify-center ">
+        <div className="flex justify-center mt-14">
           <Avatar
             style={{
               height: "200px",
@@ -111,7 +111,7 @@ function Display() {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
-            Project
+            <a href="/projects" className="font-bold font-roboto">Projects</a>
           </Button>
         </div>
       </div>

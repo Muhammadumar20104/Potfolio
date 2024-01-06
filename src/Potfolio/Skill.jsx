@@ -6,7 +6,7 @@ function Skill() {
     <>
       <div className="lg:w-[80%] grid grid-rows-1 h-fit gap-3">
         <h1 className="h-fit text-[24px] font-bold font-sans">My Skill</h1>
-        <div className="md:w-[100%] lg:w-full grid lg:grid-cols-5 gap-3 md:grid-cols-5  xs:grid-cols-3">
+        <div className="md:w-[100%] lg:w-full flex flex-wrap gap-4">
           <Button
             variant="contained"
             size="large"

@@ -21,7 +21,7 @@ function About() {
             alignItems: "center",
           }}
         >
-          <h1 className="lg:text-5xl md:text-4xl xs:text-5xl font-bold tex font-roboto mb-16">About Me</h1>
+          <h1 className="lg:text-5xl md:text-4xl xs:text-2xl md:mt-8 xs:mt-10 font-bold tex font-roboto mb-16 mt-4">About Me</h1>
           <p className="xs:text-base md:text-xl  text-gray-600 xs:w-fit md:w-[80%] sm:w-[600px] mb-20">
             Here you will find more information about me, what I do, and my
             current skills mostly in terms of programming and technology

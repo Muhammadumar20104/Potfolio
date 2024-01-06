@@ -3,10 +3,10 @@ import React from "react";
 
 function Contact() {
   return (
-    <div className="w-[100%] h-[100%] p-10 bg-slate-100">
+    <div className="w-[100%] h-[100%] md:p-10 xs:p-2 bg-slate-100">
       {/* <div> */}
-      <div className="w-[100%] h-[100%]">
-        <div className="text-5xl text-center font-roboto font-bold">Contact</div>
+      <div className="w-[100%] h-[100%] xs:mt-12">
+        <div className="md:text-5xl xs:text-2xl text-center font-roboto font-bold">Contact</div>
         <div className="flex justify-center">
           <div className="text-lg font-roboto text-center text-gray-500 w-[60%] mt-8">
             Feel free to Contact me by submitting the form below and I will get

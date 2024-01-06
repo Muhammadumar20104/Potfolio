@@ -14,15 +14,32 @@ import { Button, ButtonGroup, IconButton } from "@mui/material";
 import About from "./Potfolio/About";
 import Projects from "./Potfolio/Projects";
 import Contact from "./Potfolio/Contact";
-
+import Footer from "./Potfolio/Footer";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 function App() {
   return (
     <>
-      <Navbar />
-      <Display />
-      <About />
-      <Projects />
-      <Contact/>
+      <div>
+        <Navbar />
+        <section id="home" className="">
+          <Display />
+        </section>
+        <section id="about" className="">
+          <About />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+        <Footer />
+      </div>
       {/* <div className=" p-1 ">
         <MUI />
         <Sold />

@@ -2,11 +2,12 @@ import { Button } from "@mui/material";
 import React from "react";
 
 function Projects() {
+  
   return (
     <>
       <div className="w-[100%] h-auto mt-20 md:p-14">
         <div className="p-2">
-          <div className="text-center text-5xl font-bold font-roboto">
+          <div className="text-center md:text-5xl xs:text-2xl xs:mt-10 font-bold font-roboto">
             Projects
           </div>
           <div className="flex justify-center">
