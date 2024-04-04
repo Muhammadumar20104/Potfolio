@@ -4,7 +4,8 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { Link } from "react-scroll";
 function Display() {
   const [hovered, setHovered] = useState(false);
   const [linkIn, setLink] = useState(false);
@@ -12,7 +13,8 @@ function Display() {
   const [tiwwiter, setTiwwiter] = useState(false);
   const [facebook, setFacebook] = useState(false);
   const [git, setGit] = useState(false);
-
+  const inputRef = useRef(null);
+  const [image, setImage] = useState("");
   const LinkedIn = {
     color: "#0A66C2",
     fontSize: linkIn ? "45px" : "40px",
@@ -39,6 +41,20 @@ function Display() {
     color: hovered ? "white" : "black",
     fontSize: "large",
     fontWeight: "bold",
+  };
+  function scrollToTop() {
+    window.scrollTo({
+      top: 1,
+      behavior: "instant", // Smooth scroll
+    });
+  }
+  const handleDiv = () => {
+    inputRef.current.click();
+  };
+  const handleimageChange = (event) => {
+    const saveFile = event.target.files[0];
+    console.log(saveFile);
+    setImage(saveFile);
   };
   return (
     <>
@@ -84,16 +100,36 @@ function Display() {
         </div>
       </div>
       <div className="relative  w-full h-fit grid grid-rows-3 justify-center ">
-        <div className="flex justify-center mt-14">
-          <Avatar
-            style={{
-              height: "200px",
-              width: "200px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-            alt="Remy Sharp"
-            src="src\Components\W4.jpg"
+        <div className="flex justify-center mt-14" onClick={handleDiv}>
+          {image ? (
+            <Avatar
+              style={{
+                height: "200px",
+                width: "200px",
+                display: "flex",
+                justifyContent: "center",
+              }}
+              alt="Remy Sharp"
+              src={URL.createObjectURL(image)}
+            />
+          ) : (
+            <Avatar
+              style={{
+                height: "200px",
+                width: "200px",
+                display: "flex",
+                justifyContent: "center",
+              }}
+              alt="Remy Sharp"
+              src="src\Components\W4.jpg"
+            />
+          )}
+          <input
+            type="file"
+            className=""
+            ref={inputRef}
+            onChange={handleimageChange}
+            style={{ display: "none" }}
           />
         </div>
 
@@ -111,7 +147,16 @@ function Display() {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
-            <a href="/projects" className="font-bold font-roboto">Projects</a>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="font-bold font-roboto "
+              onClick={scrollToTop}
+            >
+              Projects
+            </Link>
+            {/* <Link to="/projects" className="font-bold font-roboto">Projects</Link> */}
           </Button>
         </div>
       </div>

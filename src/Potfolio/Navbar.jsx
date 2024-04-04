@@ -44,7 +44,7 @@ function Navbar() {
   };
   function scrollToTop() {
     window.scrollTo({
-      top: -1,
+      top: 1,
       behavior: "smooth", // Smooth scroll
     });
   }
